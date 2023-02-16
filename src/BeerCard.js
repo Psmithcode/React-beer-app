@@ -1,17 +1,31 @@
 import React, { Component } from "react";
-
+// import axios from "axios";
+// import { useState } from "react";
+// import Heart from "react-animated-heart";
 class BeerCard extends Component {
   constructor(props) {
     super(props);
-    this.setState = {
+    this.state = {
       isClicked: false,
     };
   }
 
+  // const [isClick, setClick] = useState(false);
   render() {
     return (
-      <li>
-        <img src={this.props.image_url} alt={this.props.name}></img>
+      <li
+        style={{
+          listStyle: "none",
+          display: "flex",
+          width: "100%",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <img
+          style={{ height: "200px" }}
+          src={this.props.image_url}
+          alt={this.props.name}
+        ></img>
         <div>
           <p>{this.props.name}</p>
           <p>{this.props.tagline}</p>
@@ -22,10 +36,9 @@ class BeerCard extends Component {
               this.setState({
                 isClicked: !this.state.isClicked,
               });
-              console.log(this.props.name);
             }}
           >
-            {this.state.isClicked ? "Liked" : "Like"}
+            {this.state.isClicked === true ? "Liked" : "Like"}
           </button>
         </div>
       </li>

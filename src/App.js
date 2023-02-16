@@ -10,7 +10,7 @@ class App extends Component {
 
     this.state = {
       arrayOfBeer: [],
-      isLiked: "Like",
+      // isLiked: "Like",
     };
   }
 
@@ -21,13 +21,13 @@ class App extends Component {
     });
   }
 
-  handleLike = (index) => {
-    // this.state.isLiked
-    //   ? this.setState({ isLiked: "Like" })
-    //   : this.setState({ isLiked: "Liked" });
-    console.log("was clicked at index: ", index);
-    let copyOfBeers = this.state.arrayOfBeer;
-  };
+  // handleLike = (index) => {
+  //   // this.state.isLiked
+  //   //   ? this.setState({ isLiked: "Like" })
+  //   //   : this.setState({ isLiked: "Liked" });
+  //   console.log("was clicked at index: ", index);
+  //   let copyOfBeers = this.state.arrayOfBeer;
+  // };
 
   render() {
     return (
